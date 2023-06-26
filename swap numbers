@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main(){
+int a=5,int b=10;
+cout<<"Before swapping"<<endl;
+cout<<a<<b;
+int temp=int a;
+int a=int b;
+int b=int temp;
+cout<<"After swapping"<<endl;
+cout<<a<<b;
+}
