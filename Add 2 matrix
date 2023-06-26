@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int main(){
+int a[50][50],b[50][50],i,j,r,c,C[50][50];
+cout<<"Enter the no of rows";
+cin>>r;
+cout<<"Enter the no of columns";
+cin>>c;
+cout<<"Enter the elements of 1st matrix";
+for(i=0;i<r;i++){
+    for(j=0;j<c;j++){
+        cin>>a[i][j];
+    }
+}
+cout<<"Enter the elements of 2nd matrix";
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            cin>>b[i][j];
+        }
+    }
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            C[i][j]=a[i][j]+b[i][j];
+        }
+    }
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            cout<<C[i][j]<<endl;
+        }
+    }
+    return 0;
+}
+
