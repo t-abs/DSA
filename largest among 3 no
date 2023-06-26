@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b,c;
+cout<<"Enter number a"<<endl;
+cin>>a;
+cout<<"Enter number b"<<endl;
+cin>>b;
+cout<<"Enter number c"<<endl;
+cin>>c;
+if(a>b && a>c)
+    cout<<" largest number"<<a;
+    
+else if(b>a && b>c)
+    cout<<" largest number"<<b;
+
+else
+cout<<" largest number"<<c;
+}
