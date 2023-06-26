@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int r=0;
+    int a,n;
+    int original=n;
+    cout<<"Enter a number";
+    cin>>n;
+    
+    while(n!=0){
+        a=n%10;
+        r=r*10+a;
+        n=n/10;
+    }
+    if(n==r){
+        cout<<r<<"Palindrome number";
+    }else{
+        cout<<r<<"Non Palindrome number";
+    }
+}
+    
