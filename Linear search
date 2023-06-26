@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int LinearSearch(int a[],int n,int key){
+    int i;
+    for(i=0;i<n;i++){
+        if(a[i]==key)
+            return i;
+         return -1;
+    }
+}
+    int main(){
+        cin>>"Enter the size of array";
+        cout<<n;
+        cin>>"Enter the elements of array";
+        cout<<a[i];
+        int result=LinearSearch(int a[],int n,int key);
+        cout<<result;
+        return 0;
+    }
