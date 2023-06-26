@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main(){
+int i;
+int s=0;
+int n;
+cout<<"Enter the limit";
+cin>>n;
+for(i=1;i<n;i++){
+    s=s+i;
+}
+cout<<s;
+return 0;
+}
+
