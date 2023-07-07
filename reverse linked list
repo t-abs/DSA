@@ -1,0 +1,23 @@
+//
+class Node
+    {
+    public:
+        int data;
+        Node *next;
+        Node(int data)
+        {
+            this->data = data;
+            this->next = NULL;
+        }
+    };
+//
+
+Node *reverse(Node *head){
+if(head==NULL || head->next==NULL){
+return;
+}
+Node *chotahead=reverse(head->next);
+head=next->next=head;
+head->next=NULL;
+return chotahead;
+}
