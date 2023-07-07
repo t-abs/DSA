@@ -6,7 +6,7 @@ return;
 Node *slow=head;
 Node *fast=head->next;
 while(fast!=NULL){
-slow=head->next;
+slow=slow->next;
 fast=fast->next->next;
 }
 return slow;
