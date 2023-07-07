@@ -1,0 +1,16 @@
+
+Node *Mid(Node *head){
+if(head==NULL || head->next==NULL){
+return;
+}
+Node *slow=head;
+Node *fast=head->next;
+while(fast!=NULL){
+slow=head->next;
+fast=fast->next->next;
+}
+return slow;
+}
+
+
+
