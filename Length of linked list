@@ -1,0 +1,16 @@
+int length(Node *head){
+int count=0;
+while(head!=0){
+head=head->next;
+count++;
+}
+return count;
+}
+//Recursive way=
+int length(Node *head){
+if(head==NULL){
+		return 0;
+	}
+	return length(head->next)+1;
+
+}
