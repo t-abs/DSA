@@ -1,3 +1,4 @@
+//Totoise Hare Approach
 
 Node *Mid(Node *head){
 if(head==NULL || head->next==NULL){
