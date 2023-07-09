@@ -1,0 +1,36 @@
+//Representation of Node Class
+Class Node{
+public:
+int data;
+Node *next;
+Node(int data){
+this->data=data;
+this->next=NULL;
+}
+};
+//
+
+Node *sortedList(Node *head){
+if(head==NULL){
+return;
+}
+Node *current=head;
+while(current!=NULL && current->next!=NULL){
+//if equal
+if(current->data == current->next->data){
+current *next_next=current->next->next;
+current *Nodetodelete=current->next;
+delete(Nodetodelete);
+ curr -> next = next_next;
+        }
+        else
+//not equal
+        {
+            curr = curr -> next;
+        }   
+    }
+
+
+    
+    return head; 
+}
