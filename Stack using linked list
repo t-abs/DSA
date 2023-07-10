@@ -58,7 +58,7 @@ return size==0;
 }
 
 void push(int element){
-Node *newnode=newnode(element);
+Node *newnode=new node(element);
  if(head == NULL) {
   head = newNode;
   size++;
