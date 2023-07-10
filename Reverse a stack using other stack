@@ -1,0 +1,35 @@
+//
+logic=
+input and extra 2 stacks are given first reverse the top elements from input one by one and insert them one by one in extra stack and thereafter delete the below ones
+in extra stack and make input=extra
+//
+
+void reverseStack(stack<int> &input,stack<int> &extra){
+  int length=input.size();
+  for(int i=0;i<length;i++){
+  int a=input.top();
+    extra.push(a);
+    input.pop();
+    }
+  input=extra;
+  }
+  // Driver Code
+int main()
+{
+    int n = 5;
+ 
+    stack<int> s;
+    s.push(1);
+    s.push(2);
+    s.push(3);
+    s.push(4);
+    s.push(5);
+ 
+    reverseStack(input, extra);
+ 
+    for (int i = 0; i < n; i++) {
+        cout << s.top() << " ";
+        s.pop();
+    }
+    return 0;
+  }
