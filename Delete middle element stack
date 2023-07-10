@@ -1,0 +1,42 @@
+void Deletemid(stack<char> &s,int size,int current){
+if(s.empty() || size==n){
+return;
+}
+int x=s.top();
+s.pop();
+
+//remove elements
+
+Deletemid(s,size,current+1);
+
+//put back all elements except middle
+
+if(currrent!= floor(size/2)+1);
+s.push(x);
+}
+
+int main()
+{
+    stack<char> st;
+ 
+    //push elements into the stack
+    st.push('1');
+    st.push('2');
+    st.push('3');
+    st.push('4');
+    st.push('5');
+    st.push('6');
+    st.push('7');
+ 
+    deleteMid(st, st.size());
+ 
+    // Printing stack after deletion
+    // of middle.
+    while (!st.empty())
+    {
+        char p=st.top();
+st.pop();
+        cout << p << " ";
+    }
+    return 0;
+}
