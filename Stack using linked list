@@ -1,0 +1,85 @@
+// Following is  the representation of Node class
+Class Node{
+public:
+int data;
+Node *next;
+}
+Node(int data){
+this->data=data;
+next=NULL;
+};
+//
+class Stack {
+// 	// Define the data members
+//    public:
+//     Stack() {
+//         // Implement the Constructor
+//     }
+
+// 	/*----------------- Public Functions of Stack -----------------*/
+
+//     int getSize() {
+//         // Implement the getSize() function
+//     }
+
+//     bool isEmpty() {
+//         // Implement the isEmpty() function
+//     }
+
+//     void push(int element) {
+//         // Implement the push() function
+//     }
+
+//     int pop() {
+//         // Implement the pop() function
+//     }
+
+//     int top() {
+//         // Implement the top() function
+//     }
+// };
+
+//
+Class Stack{
+Node *head;
+int size;
+}
+Stack(){
+head=NULL;
+size=0;
+}
+int getSize(){
+//size return
+return size;
+}
+
+bool isEmpty(){
+return size==0;
+}
+
+void push(int element){
+Node *newnode=newnode(element);
+ if(head == NULL) {
+  head = newNode;
+  size++;
+  return;
+        }
+void pop(int element){
+ if(head == NULL) {
+            return -1;
+        }
+        int temp = head -> data;
+        head = head -> next;
+        size--;
+        return temp;
+    }
+
+    int top() {
+        // Implement the top() function
+        if(head == NULL) {
+            return -1;
+        }
+        return head -> data;
+    }
+};
+
