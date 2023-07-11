@@ -1,0 +1,35 @@
+//logic is to pirst pick up all the top most elements till the queue is empty and then delete them as well and put them back to stack and vice versa so the elements will b reversed.
+
+//with help of other stack
+//
+
+
+queue<int> rev(queue<int> q)
+{
+    stack<int> s;
+    
+    while(!q.empty()) {
+        int element = q.front();
+        q.pop();
+        s.push(element);
+    }
+
+    while(!s.empty()) {
+        int element = s.top();
+        s.pop();
+        q.push(element);
+    }
+    return q;
+}
+//Using Recursion
+//
+void reverseQueue(queue<int> &q) {
+if(q.empty()){
+return;
+}
+int data=q.front();
+q.pop();
+reverseQueue(q);
+q.push(data);
+}
+
