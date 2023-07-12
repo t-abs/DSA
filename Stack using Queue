@@ -1,0 +1,52 @@
+#include<queue>
+class Stack {
+queue<int> q1;
+queue<int> q2;
+
+   public:
+    Stack() {
+    
+    }
+
+    
+
+    int getSize() {
+      return q1.size;  
+    }
+
+    bool isEmpty() {
+       return size==0; 
+    }
+
+    void push(int element) {
+       q2.push(element);
+      while(!q1.empty()){
+       q2.push(q1.front());
+//swap q1 qnd q2
+          queue<int> temp = q1;  
+        q1 = q2;
+        q2 = temp;
+    }
+
+    int pop() {
+        // If empty, return -1.
+        if (isEmpty()) {  
+            return -1;
+        }
+    
+        int ans = q1.front();  
+        q1.pop();
+        return ans;
+    }
+
+    int top() {
+        if (isEmpty()) {
+            return -1;
+        }
+
+        int ans = q1.front();
+
+        return ans;
+    }
+}
+};
