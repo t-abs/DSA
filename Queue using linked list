@@ -1,0 +1,66 @@
+//Class of Node
+class Node{
+public:
+int data;
+Node*next;
+}
+Node(int data){
+this=data->data;
+next=NULL;
+}
+//
+//Class of Queue
+
+class Queue{
+public:
+Node *head;
+Node *tail;
+int size;
+}
+public:
+Queue(){
+head=NULL;
+tail=NULL;
+size=0;
+}
+int getSize() {
+return size;
+}
+ bool isEmpty() {
+return size==0;
+}
+ int front() {
+if(head==NULL){
+return -1;
+}else{
+return head->data;
+}
+}
+void enqueue(int data) {
+Node *newNode=new Node(data);
+if(head==NULL){
+head=newNode;
+tail=newNode;
+size++;
+return;
+}
+tail=tail->next;
+tail=newNode;
+size++;
+}
+void enqueue(int data) {
+if(head==NULL){
+return -1;
+}
+ int data=  head -> data;
+ Node *temp = head;
+head = head -> next;
+ size--;
+return data;
+}
+    
+
+   
+   
+   
+
