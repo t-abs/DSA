@@ -1,0 +1,26 @@
+void insertatbottom(stack<int> &stack,int element){
+  //if the stack is empty then simply push the element
+  if(stack.empty()){
+    stack.push(element);
+    }
+  //if the stack is not empty then simply remove top and pop
+  int data=stack.top();
+  stack.pop();
+  //recursively call 
+  insertatbottom(stack,element);
+  }
+stack.push(data);
+
+void reverseStack(stack<int> &stack) {
+//base case
+  if(stack.empty()){
+    return;
+    }
+  int data=stack.top();
+  stack.pop();
+  reverseStack(stack);
+  insertatbottom(stack,data);
+  }
+
+//Logic is not same for reverse stack and  queen here in stack we have to insert the element at bottom also and for this call the function once for insert at bottom
+  whearas in queue at end directly push them//
