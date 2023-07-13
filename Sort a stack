@@ -1,0 +1,28 @@
+ void sortInsertStack(stack<int> &stack,int data){
+if(stack.empty() || (!stack.empty() && stack.top()<data)){
+stack.push(data);
+return;
+}
+int n=stack.top();
+stack.pop();
+//recursive call
+sortInsertStack(stack,data);
+//push back the element n in proper place
+stack.push(n);
+}
+void sortStack(stack<int> &stack){
+//base case
+if(stack.empty()){
+return;
+}
+//continue top and pop of the elements
+
+int data=stack.top();
+stack.pop();
+//Sort the remaining elements
+
+sortStack(stack);
+//Call this function for inserting the top element in sorted manner
+
+sortInsertStack(stack,data);
+}
