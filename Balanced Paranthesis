@@ -1,0 +1,26 @@
+bool isValidParanthesis(string expression){
+stack<char> s;
+for(int i=0;i<expression;i++){
+char ch=expression[i];
+}
+if(ch=='('||ch=='{'||ch=='['){
+s.push(ch);
+}
+//if opening bracket present then push into stack
+//check for closing bracket and if it matches with opening check top and pop them back else return false
+if(!s.empty){
+char top=s.top();
+if(ch==')' && top=='(' || ch==']' && top=='[' || ch=='}' && ch=='{'){
+s.pop();
+}
+else{
+return false;
+if(s.empty()){
+return true;
+}else{
+return false;
+}
+}
+}
+}
+
