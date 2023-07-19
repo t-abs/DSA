@@ -1,0 +1,20 @@
+int height(Node* node)
+{
+    // base case tree is empty
+    if (node == NULL)
+        return 0;
+
+  
+    return 1 + max(height(node->left), height(node->right));
+}
+bool isBalanced(Node *root){
+//base case
+if(root==NULL){
+return 1;
+}
+int h1=root->right;
+int h2=root->left;
+if(abs(h1-h2)<=1 && isBalanced(root->right) && isBalalnced(root->left))
+return 1;
+}
+
