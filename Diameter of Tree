@@ -1,0 +1,27 @@
+//Logic = To calculate maximum of left diameter subtree , right diameter subtree and height  of left and right including root node
+
+int height(struct node* node);
+int diameter(struct node* tree){
+if(tree==NULL){
+return 0;
+}
+int h1=height(node->left);
+int h2=height(node->right);
+int ldiameter=diameter(node->left);
+int rdiameter=diameter(node->right);
+int cnt=max(h1,h2)+1;
+return max(ldiameter,rdiameter,cnt);
+}
+ int height(struct Node* node){
+        //base case
+        if(node == NULL) {
+            return 0;
+        }
+        
+        int h1 = height(node ->left);
+        int h2 = height(node->right);
+        
+        int cnt = max(h1, h2) + 1;
+        return cnt;
+        
+    };
