@@ -1,3 +1,5 @@
+BINARY TREES=
+
 //level order traversel in tree
 
 void levelOrderTraversal(node* root) {
@@ -66,4 +68,29 @@ void postorder(node* root) {
     cout << root-> data << " ";
 
 }
+//For traversal in normal trees no left and right in root direct run a loop to specify the children of root
+
+void printPostOrder(TreeNode<int>* root) {
+    //base case
+    if(root==NULL){
+        return;
+    }
+    for (int i = 0; i < root->children.size(); i++) {
+      printPostOrder(root->children[i]);
+    }
+
+    cout << root -> data << " "; 
+}
+
+void printPreOrder(TreeNode<int> *root){
+//base case
+if(root==NULL){
+return;
+}
+cout<<root->data<<"";
+for(int i=0;i<root->children.size();i++){
+printPreOrder(root->children[i]);
+}
+}
+
 
