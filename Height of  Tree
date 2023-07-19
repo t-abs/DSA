@@ -1,0 +1,31 @@
+//Binary tree=
+int height(struct Node* node){
+//base case
+if(node==NULL){
+return 0;
+}
+//calculate separate h1 and h2 in left and right subpart of tree
+
+int h1=height(node->left);
+int h2=height(node->right);
+
+//determine maximum of h1 and h2 and add 1 due to root node
+
+int count=max(h1,h2);
+return 1+count;
+}
+
+//Tree =Hint:No left or right part only a loop for children in root
+#include<vector>
+int getHeight(TreeNode<int>* root) {
+//base case
+if(root==NULL){
+return;
+}
+int count=0;
+for(int i=0;i<root->children.size();i++){
+int temp=getHeight(root->children[i]);
+int count=max(temp,count);
+return count+1;
+}
+}
