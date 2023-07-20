@@ -1,0 +1,63 @@
+//IDENTICAL BINARY TREES
+Class{
+public:
+ bool isIdentical(Node *r1, Node *r2){
+//base case
+if(r1==NULL && r2==NULL){
+return true;
+}
+if(r1==NULL && r2!=NULL){
+return false;
+}
+if(r1!==NULL && r2==NULL){
+return false;
+}
+//nodes is  identical or not
+bool left=isIdentical(r1->left,r2->left);
+bool right=isIdentical(r1->right,r2->right);
+}
+//check for values identical or not
+bool value=r1->data=r2->data;
+ if(left && right && value) {
+            return true;
+        }
+        else
+        {
+            return false;
+}
+        };
+
+
+//Identical Trees
+
+bool areIdentical(TreeNode<int> *root1, TreeNode<int> * root2) {
+    if(root1==NULL && root2==NULL){
+        return true;
+    }
+    if(root1!=NULL && root2==NULL){
+        return false;
+
+    }if(root1==NULL && root2!=NULL){
+        return false;
+    }
+    if ((root1->data != root2->data) or
+        (root1->children.size() != root2->children.size())) {
+      return false;
+    }
+
+     bool flag = true;
+    
+    for(int i = 0; i < root1 -> children.size(); i++) {
+        flag = areIdentical(root1 -> children[i], root2 -> children[i]);
+        if(!flag) {
+            return false;
+        }
+    }
+
+    if (root1->data == root2->data) {
+      return true;
+    }
+}
+
+    
+    
