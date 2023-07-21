@@ -18,3 +18,35 @@ return true;
 }
 return isNodePresent(root->left,x) or isNodePresent(root->right,x);
 }
+
+//Print Nodes Without Sibling
+void printNodesWithoutSibling(BinaryTreeNode<int> *root) {
+//corner case
+if(root==NULL){
+return;
+}
+if(root->left!=NULL && root->right=NULL){
+cout<<root->left->data;
+}
+if(root->right!=NULL && root->left=NULL){
+cout<<root->right->data;
+}
+printNodesWithoutSibling(root->left);
+printNodesWithoutSibling(root->right);
+}
+
+//Remove leaf Nodes
+logic-Leaf nodes which do not have any children
+removeLeafNodes(BinaryTreeNode<int> *root) {
+if(root==NULL){
+		return root;
+	}
+        if (root->left == NULL && root->right == NULL) {
+          return NULL;
+        }
+
+     root->left= removeLeafNodes(root->left);
+      root->right=  removeLeafNodes(root->right);
+		return root;
+}
+
