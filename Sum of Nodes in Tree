@@ -11,3 +11,13 @@ sum+=sumOfNodes(root->children[i]);
 }
 return sum;
 }
+
+//Sum in the Binary Tree
+int getSum(BinaryTreeNode<int>* root) {
+if(root==NULL){
+return 0;
+}
+int sum=root->data;
+sum+=getSum(root->left)+getSum(root->right);
+return sum;
+}
