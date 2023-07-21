@@ -67,3 +67,20 @@ bool isMirror(BinaryTreeNode<int> *root1,BinaryTreeNode<int> *root2){
 bool isSymmetric(BinaryTreeNode<int>* root) {
 	return isMirror(root,root);
 }
+//Check if 2 are mirror trees
+bool isMirror(BinaryTreeNode<int> *root1,BinaryTreeNode<int> *root2){
+    //3 corner cases
+    if(root1==NULL && root2==NULL){
+        return true;
+    }
+    if(root1!=NULL && root2==NULL){
+        return false;
+    }
+    if(root1==NULL && root2!=NULL){
+        return false;
+    }
+    return root1->data==root2->data && isMirror(root1->right,root2->left) && isMirror(root1->left,root2->right);
+}
+bool isSymmetric(BinaryTreeNode<int>* root) {
+	return isMirror(root,root);
+}
