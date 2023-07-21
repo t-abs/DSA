@@ -12,8 +12,8 @@ bool isBalanced(Node *root){
 if(root==NULL){
 return 1;
 }
-int h1=root->right;
-int h2=root->left;
+int h1=height(root->left);
+int h2=height(root->right);
 if(abs(h1-h2)<=1 && isBalanced(root->right) && isBalalnced(root->left))
 return 1;
 }
