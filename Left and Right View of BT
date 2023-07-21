@@ -1,0 +1,46 @@
+Left view of BT=
+//Logic=Recursion Check for the base condition .Create a new vector to store but check for if you entered the new level then store the value .Bcoz the first node of each level 
+to be incremented and printed
+//
+
+void solve(Node *root,vector<int> &ans,int level){
+//base case
+if(root==NULL){
+return;
+}
+//Checking you hv entered a new level and store the value 
+if(level==ans.size()){
+ans.push_back(root->data);
+}
+//recursively call the left and  right levels 
+solve(root->right,ans,level+1);
+solve(root->left,ans,level+1);
+}
+vector<int> leftView(Node *root)
+{
+vector<int> ans;
+solve(root,ans,0);
+return ans;
+}
+
+Right view of BT=
+same logic
+void solve(Node *root,vector<int> &ans,int level){
+//base case
+if(root==NULL){
+return;
+}
+//Checking you hv entered a new level and store the value 
+if(level==ans.size()){
+ans.push_back(root->data);
+}
+//recursively call the left and  right levels 
+solve(root->right,ans,level+1);
+solve(root->left,ans,level+1);
+}
+vector<int> rightView(Node *root)
+{
+vector<int> ans;
+solve(root,ans,0);
+return ans;
+}
