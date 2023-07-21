@@ -1,0 +1,59 @@
+BOUNDARY TRAVERSAL IN BINARY TREE-
+//logic/Approach-
+Here we have to print the data along the boundary of the tree 
+1.While traversing the left part of tree check null condition and if any leaf node comes into the path just move back. But here hv to store the root's data .If left part exists 
+in root call the left part and store ans,else move to the right part.
+2.While traversing the leaves node check null condition and if any leaf node comes store the answer and then traverse leaf node in left and right part separately.
+3.While traversing the right part of tree check null condition and if a leaf node comes return back then traverse if right part exist and store ans else move to left part and final 
+store the answer.(storing a ans vector to store the answers)
+//
+Code-
+
+void traverseleft(Node *root,vector<int> *ans){
+if((root==NULL) || (root->left==NULL && root->right==NULL)){
+return;
+//storing the root data 
+ans.push_back(root->data);
+if(root->left)
+traverseleft(root->left,ans);
+else
+traverseleft(root->right,ans);
+}
+void traverseleaf(Node *root,vector<int> *ans){
+if(root==NULL){
+return;
+}
+//storing data in leaf node
+if(root->left==NULL && root->right==NULL){
+ans.push_back(root->data);
+}
+traverseleaf(root->left,ans);
+traverseleaf(root->right,ans);
+}
+void traverseright(Node *root,vector<int> *ans){
+if((root==NULL) || (root->right==NULL && root->left==NULL)){
+return;
+}
+if(root->right)
+traverseright(root->right,ans);
+else
+traverseleft(root->left,ans);
+//wapas aa gye ab ans store krdo
+ans.push_back(root->data);
+}
+}
+  vector <int> boundary(Node *root){
+vector<int> ans;
+if(root==NULL)
+return ans;
+ans.push_back(root->data);
+//left part store print
+traverseleft(root->left,ans);
+
+//leaf nodes separate left and right part subtrees
+traverseleaf(root->left,ans);
+traverseleaf(root->right,ans);
+//right  part  
+traverseright(root->right,ans);
+return ans;
+}
