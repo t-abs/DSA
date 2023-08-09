@@ -1,0 +1,51 @@
+//Intro-Heap is a data structure whose every level should be filled except the last level and is inclined to the left(CBT)
+//Insert Algo-Find the parent node and compare it with the parent if its greater then swap
+//
+#include<iostream>
+using namespace std;
+Class heap{
+public:
+int arr[100];
+int size;
+}
+heap{
+arr[0]=-1;
+size=0;
+}
+void insert( int val){
+size=size+1;
+int index=size;
+arr[index]=val;
+}
+while(index>1){
+parent=index/2;
+}
+if(arr[parent]<arr[index]){
+swap(arr[parent],arr[index]);
+index=parent;
+}
+else{
+return;
+}
+}
+}
+void print(){
+for(int i=0;i<size;i++){
+cout<<arr[i]<<" ";
+cout<<endl;
+}
+int main(){
+heap h;
+h.insert(5);
+h.insert(7);
+h.insert(10);
+h.insert(4);
+return 0;
+}
+}
+
+}
+
+
+
+
