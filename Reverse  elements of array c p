@@ -1,0 +1,22 @@
+#include<stdio.h>
+//continue swapping the first and last element//
+void reversearr(int arr[],int n){
+int start=0;
+int end=n-1;
+while(start<=end){
+swap(arr[start],arr[end]);
+start++;
+end--;
+}
+void printarray(int arr[],int n){
+for( int i=0;i<n;i++){
+printf("%d",a[i]);
+}
+int main(){
+int arr[5]={1,3,6,9,0,8};
+reversearr(arr,5);
+printarr(arr,5);
+return 0;
+}
+}
+
