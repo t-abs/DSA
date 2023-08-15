@@ -1,0 +1,26 @@
+//Algo=To swap the every alternate no check the index to be swapped is in the index or not then continue swapping with the next
+element and increment it by 2 or else the next will get swapped too//
+
+#include<stdio.h>
+void printarray(int a[],int n){
+int i;
+for(i=0;i<n;i++){
+printf("%d",a[i]);
+}
+void swaparray(int a[],int size){
+for(i=0;i<size;i+=2){
+    if(i+1<size){
+//swap
+int temp=a[i];
+a[i]=a[i+1];
+a[i+1]=temp;
+}
+}
+}
+}
+int main(){
+int a[6]={1,7,9,0,5,6};
+printarray(a,6);
+swaparray(a,6);
+return 0;
+}
