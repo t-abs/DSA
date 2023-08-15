@@ -1,0 +1,18 @@
+//Algo=2 pointer approach to sort 0 and 1 if by initialising i and j if 0 and 1 at right place let it go else start swapping as 
+needed.
+
+void sortZeroesAndOne(int input[], int size){
+int left=0;
+int right=size-1;
+while(left<right){
+while(arr[left]==0 && left<right){
+left++;
+}
+while(arr[right]==1 && left<right){
+right--;
+}
+while(arr[left]==1 && arr[right]==0){
+swap(arr[left],arr[right]);
+}
+}
+}
