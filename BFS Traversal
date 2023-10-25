@@ -1,0 +1,20 @@
+//The nodes will be printed here breadth wise with each level once .Queue data structure is used here
+
+void printBFS(int** edges,int n,int sv){
+queue<int>pendingvertices;
+bool * visited=new bool[n];
+for(int i=0;i<n;i++){
+visited[i]=false;
+}
+pendingvertices.push[sv];
+visited[sv]=true;
+while(!pendingvertices.empty()){
+int currentvertex=pendingvertices.pop(){
+cout<<currentvertex<<endl;
+for(int i=0;i<n;i++){
+if(edges[currentvertex][i]==1 && !visited[i]){
+pendingvertices.push(i);
+visited[i]=true;
+}
+}
+}
