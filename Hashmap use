@@ -1,0 +1,30 @@
+#include<iostream>
+#include<map>
+#include<map>
+using namespace std;
+int main(){
+//creation
+map<string,int>m;
+//insertion
+m["Meera"]=3;
+//2
+pair<string,int>pair2("love",2);
+m.insert(pair2);
+//search
+cout<<m["Meera"]<<endl;
+cout<<m.at("babbar")<<endl;
+cout<<m.size()<<endl;
+//to check present or not
+cout<<m.count("bro")<<endl;
+//erase fxn
+m.erase("love");
+//iterator
+map<string,int> :: iterator it=m.begin():
+while(it != m.end()){
+cout<<it->first<<"" <<it->second<<endl;
+it++;
+}
+return 0;
+}
+return 0;
+}
