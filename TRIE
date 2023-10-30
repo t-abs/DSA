@@ -1,0 +1,66 @@
+// Trie Implementation
+TrieNode Class Imp
+
+Class TrieNode{
+char data;
+TrieNode** children;
+bool isterminal;
+}
+//parametrised constructor
+TrieNode(char data){
+this->data=data;
+children=new TrieNode*[26];
+for(int i=0;i<26;i++){
+children[i]=NULL;
+}
+bool isterminal=true;
+}
+//insert fxn
+void insert(TrieNode* root,string word){
+//base case
+if(word.size()==0){
+root->isterminal=true;
+return;
+}
+//indexing mapping small calculation 
+int[index]=word[0]-'a';
+Trienode* child;
+if(root->children[i]!=NULL){   //word is present and search and store the address of those characters
+child=root->children[i];
+}else{
+child=new TrieNode(word[0]); //word is not present in child create a new node insert
+root->children[i]=child;
+}
+//recursive call
+insertword(root,word.subst(1));
+void insertWord(string word) {
+insertWord(root, word);
+}
+};
+
+//Search in Trie
+ bool search(TrieNode *root, string word)
+    {
+        if (word.size() == 0)
+            return root->isTerminal;
+}
+ int[index]=word[0]-'a';
+Trienode* child;
+if(root->children[i]!=NULL){   //word is present and search and store the address of those characters
+child=root->children[i];
+       } else{
+            return false;
+    
+}
+    bool search(string word)
+    {
+        // Write your code here
+        if (word.size() == 0)
+            return false;
+        return search(root, word);
+    }
+//Remove in tries=make isterminal false
+
+
+
+
