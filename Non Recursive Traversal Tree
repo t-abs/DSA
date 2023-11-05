@@ -1,0 +1,35 @@
+Non Recursive Tree traversals
+
+void inorder(TreeNode* root){
+stack<int> &s;
+TreeNode* current=root;
+while(current!=NULL  & !s.empty()){
+s.push(current);
+current=current->left;
+}
+else{
+curr=st.top();
+st.pop();
+printf("%d",current->data);
+current=current->right;
+}
+
+
+
+void preorder(TreeNode* root){
+stack<int> &s;
+TreeNode* curr=root;
+while(curr!=NULL & !s.empty()){
+if(curr!=NULL){
+s.push(curr);
+printf("%d",curr->data);
+}
+curr=s.top();
+s.pop();
+while(curr->left!=NULL){
+curr=curr->left;
+while(curr->right!=NULL){
+curr=curr->right;
+}
+}
+}
