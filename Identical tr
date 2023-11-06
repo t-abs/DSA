@@ -1,0 +1,17 @@
+bool areIdentical(TreeNode<int> *t, TreeNode<int> *s)
+{
+
+    // Base cases.
+    if (t == NULL && s == NULL)
+    {
+        return true;
+    }
+
+    if (t == NULL || s == NULL)
+    {
+        return false;
+    }
+
+    // Check if the data of both roots is same and data of left and right subtrees are also same.
+    return (t->val == s->val && areIdentical(t->left, s->left) && areIdentical(t->right, s->right));
+}
