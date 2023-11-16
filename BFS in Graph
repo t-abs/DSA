@@ -1,0 +1,22 @@
+  void printBFS(int** edges,int n,int sv){
+queue<int>pendingVertices;
+bool *visited=new bool[n];
+for(int i=0;i<n;i++){
+visited[i]=false;
+}
+pendingVertices.push(sv);
+visited[sv]=true;
+while(!pendingVertices.empty()){
+int currentvertex=pendingVertices.pop();
+cout<<cuurentVertex;
+for(int i=0;i<n;i++){
+if(i==currentVertex){
+continue;
+}
+while(edges[currentVertex][i]==1 && !visited[i]){
+pendingVertices.push(i);
+visited[i]=true;
+}
+}
+}
+
