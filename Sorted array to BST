@@ -1,0 +1,20 @@
+//use binary search concept here for comparing
+TreeNode* sortedBST(vector<int>& nums,int left,int right){
+//base case
+if(left>right){
+return;
+}
+//create new node to fit into mid
+int mid=(left+right)/2;
+TreeNode* t=new TreeNode(nums[mid]);
+//left and right set accordingly to BST
+t->left=sortedBST(nums,left,mid-1);
+t->right=sortedBST(nums,mid+1,right);
+return t;
+}
+TreeNode* sortedArrayToBST(vector<int>& nums) {
+if(num.size()==0){
+return NULL;
+}
+ return sortedBST(nums,0,nums.size()-1);
+}
