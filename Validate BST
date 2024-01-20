@@ -1,0 +1,17 @@
+//Compare left and right bst 
+
+
+bool isValidBST(TreeNode* root) {
+        return Bst(root,NULL,NULL);
+        
+    }
+    bool Bst(TreeNode* root,TreeNode* min,TreeNode* max){
+        if(root==NULL){
+            return true;
+        }
+    if((min==NULL || root->val>min->val) &&(max==NULL || root->val<max->val)){
+        return Bst(root->left,min,root) && Bst(root->right,root,max);
+    }
+    return false;
+    }
+
